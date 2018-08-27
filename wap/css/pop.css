@@ -1,0 +1,207 @@
+.cover {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.popup {
+  position: fixed;
+  z-index: 999;
+}
+.popup .close {
+  background: url(../images/close.png);
+  background-size: 100% 100%;
+  width: 0.81066667rem;
+  height: 0.81066667rem;
+  position: absolute;
+  right: 0.53333333rem;
+  top: 0.53333333rem;
+  cursor: pointer;
+  z-index: 5;
+}
+.popup .tit {
+  width: 100%;
+  text-align: center;
+}
+.popup .tit span {
+  background: url(../images/popt.png);
+  background-size: 100% 100%;
+  width: 6.44266667rem;
+  height: 1.088rem;
+  line-height: 1.088rem;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  color: #822b09;
+  font-size: 0.59733333rem;
+  font-weight: bold;
+  text-indent: 0.96rem;
+  text-shadow: 0.02133333rem 0.02133333rem 0 #ffffff;
+}
+.popup .pop-main {
+  padding: 0 0.74666667rem;
+  margin: 0 0.42666667rem;
+  color: #7a7a7a;
+  max-height: 5.73866667rem;
+  overflow: auto;
+  margin-top: 0.42666667rem;
+}
+.popup .pop-main .txt {
+  margin-top: 0.21333333rem;
+}
+.popup .pop-main .txt h2 {
+  color: #b43917;
+  font-size: 0.85333333rem;
+  font-weight: normal;
+}
+.popup .pop-main .txt span {
+  font-size: 0.59733333rem;
+  color: #822b09;
+  font-weight: bold;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  width: 100%;
+  padding: 0.32rem 0;
+}
+.popup .pop-main .txt span b {
+  color: #ff530f;
+}
+.popup .pop-main .txt p {
+  font-size: 0.512rem;
+  color: #822b09;
+  line-height: 0.96rem;
+}
+.popup .pop-main table {
+  width: 100%;
+  line-height: 0.768rem;
+  text-align: center;
+}
+.popup .pop-main table th {
+  color: #bf5928;
+}
+.popup .pop-main table td {
+  color: #822b09;
+}
+.popup .pop-btnbox {
+  text-align: center;
+  margin-top: 0.21333333rem;
+}
+.popup .pop-btnbox .btn {
+  background: url(../images/popbtn.png);
+  background-size: 100% 100%;
+  width: 4.39466667rem;
+  height: 1.344rem;
+  line-height: 1.17333333rem;
+  font-size: 0.46933333rem;
+  font-weight: bold;
+  color: #2766e4;
+  text-shadow: 0.02133333rem 0.02133333rem 0 #ffffff;
+  position: relative;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  margin: 0 0.21333333rem;
+}
+.open {
+  background: url(../images/open.png);
+  background-size: 100% 100%;
+  width: 14.016rem;
+  height: 10.73066667rem;
+}
+.open .close {
+  top: 2.64533333rem;
+}
+.open .pop-main {
+  margin-top: 4.736rem;
+}
+.open .pop-main .txt {
+  text-align: center;
+}
+.occlude {
+  background: url(../images/occlude.png);
+  background-size: 100% 100%;
+  width: 14.016rem;
+  height: 10.73066667rem;
+}
+.occlude .close {
+  top: 2.64533333rem;
+}
+.occlude .pop-main {
+  margin-top: 4.736rem;
+}
+.occlude .pop-main .txt {
+  text-align: center;
+  margin-top: 1.28rem;
+}
+.occlude .pop-main .txt p {
+  line-height: 0.96rem;
+}
+.small {
+  background: url(../images/popbg1.png);
+  background-size: 100% 100%;
+  width: 14.016rem;
+  height: 8.448rem;
+}
+.small .tit {
+  margin-top: 0.81066667rem;
+}
+.small .pop-main {
+  max-height: 4.26666667rem;
+}
+.small .pop-main.fx {
+  margin-top: 2.56rem;
+  max-height: 5.54666667rem;
+}
+.small .pop-main.fx .sh {
+  margin-top: 0.34133333rem;
+}
+.small .pop-main.fx .sh span {
+  font-size: 0.512rem;
+  color: #bf5928;
+}
+.small .pop-main.fx .sh p {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.32rem;
+}
+.small .pop-main.fx .sh p img {
+  width: 1.28rem;
+}
+.big {
+  background: url(../images/popbg2.png);
+  background-size: 100% 100%;
+  width: 12.992rem;
+  height: 10.47466667rem;
+}
+.big .tit {
+  margin-top: 0.81066667rem;
+}
+.big .pop-main {
+  max-height: 6.10133333rem;
+}
+.popreg {
+  background: url(../images/popreg.png);
+  background-size: 100% 100%;
+  width: 14.016rem;
+  height: 11.456rem;
+}
+.popreg .close {
+  top: 2.64533333rem;
+}
+.popreg .pop-main {
+  margin-top: 4.736rem;
+}
+.popreg .pop-main .txt {
+  text-align: center;
+}
+.popreg .pop-main p {
+  text-align: center;
+  color: #822b09;
+  font-size: 0.512rem;
+  margin-top: 0.42666667rem;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/css.css" />
+		<link rel="stylesheet" href="css/pop.css" />
+		<script type="text/javascript" src="js/viewprort.js" ></script>
+		<script type="text/javascript" src="js/zepto_1.1.3.js" ></script>
+		<script type="text/javascript" src="js/popup.js" ></script>
+	</head>
+	<body>
+		<div class="duanwu" style="position: fixed;z-index: 999;width: 100%;">
+			<img src="images/fuqing.png" width="100%">
+		</div>
+		<div class="cover"></div>
+		<script>
+			$(function(){
+				popup(".duanwu");
+				$(".duanwu").click(function(){
+					$(this).hide();
+				})
+			})
+		</script>
+	</body>
+</html>
