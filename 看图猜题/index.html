@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>看图猜题 总结夺金</title>
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/zepto_1.1.3.js" ></script>
+		<script type="text/javascript" src="js/viewprort.js"></script>
+		<script type="text/javascript" src="js/popup.js"></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+	</head>
+
+	<body>
+		<a href="#" class="logo"></a>
+		<div class="home">
+			<div class="banner"></div>
+			
+			<div class="ranking">
+				<div class="tit"></div>
+				<div class="kbox">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr><th>Header</th><th>Header</th><th>Header</th></tr>
+					</table>
+					<div id="demo">
+						<div id="demo1">
+							<table border="0" cellspacing="0" cellpadding="0">
+								<tr><td>Data</td><td>Data</td><td>Data</td></tr>
+								<tr><td>Data</td><td>Data</td><td>Data</td></tr>
+								<tr><td>Data</td><td>Data</td><td>Data</td></tr>
+							</table>
+						</div>
+						<div id="demo2"></div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="rule">
+				<a href="#" class="mybonus">我的奖金</a><a href="#" class="lrule">查看规则</a>
+			</div>
+
+			<div class="play">
+				<button id="play"></button>
+				<p>剩余<em>2</em>次挑战机会</p>
+				<button id="invite" class="btnshare"></button>
+			</div>
+		</div>
+
+		<div class="gameBox hide">
+
+			<div class="mt">
+				<div class="kt"></div>
+				<div class="imgbox"><img src="" class="img"></div>
+			</div>
+
+			<div class="writebox">
+				<div class="write"></div>
+				<div class="backspace"></div>
+			</div>
+			<div class="answerBar" id="answerBar"></div>
+			<div class="hint">提示：<span></span></div>
+			
+		</div>
+
+
+		<div class="share"></div>
+
+		<div class="spxd"></div>
+		
+		
+		<div class="pop win">
+			<!--<div class="close"></div>-->
+			<div class="ts"><img src="images/win.png"></div>
+			<div class="txt">恭喜你获得<span>**元</span>现金红包，邀请好友注册玩游戏可以增加猜题机会哦！</div>
+			<div class="btn">
+				<span class="again">继续游戏<em>剩余机会3次</em></span><span class="btnshare">邀请好友</span>
+				<p><a href="#">活动主页</a></p>
+			</div>
+		</div>
+		
+		<div class="pop lost">
+			<!--<div class="close"></div>-->
+			<div class="ts"><img src="images/lost.png"></div>
+			<div class="txt">天啦噜没猜对，邀请好友,参与游戏继续挑战<span>888元</span>现金大奖吧！</div>
+			<div class="btn">
+				<span class="again">继续游戏<em>剩余机会3次</em></span><span class="btnshare">邀请好友</span>
+				<p><a href="#">活动主页</a></p>
+			</div>
+		</div>
+		
+		<div class="pop rulepop">
+			<div class="close"></div>
+			<div class="ts"><img src="images/yxgz.png"></div>
+			<div class="txt">1、每天3次初始猜题机会；<br />
+2、分享游戏至好友/微信群/朋友圈，1位好友点击注册即可增加1次猜题机会（与邀请好友开宝箱活动不重叠）；<br />
+3、现金红包于活动结束后5个工作日内发放。</div>
+		</div>
+		
+		<div class="pop more">
+			<div class="close"></div>
+			<div class="ts"><img src="images/ts.png"></div>
+			<div class="txt">你已经没有游戏机会了，邀请好友注册玩游戏可以增加猜题机会。</div>
+			<div class="btn">
+				<span class="btnshare">邀请好友</span><span>活动主页</span>
+			</div>
+		</div>
+		
+		<div class="pop bonus">
+			<div class="close"></div>
+			<div class="ts"><img src="images/bonus.png"></div>
+			<div class="txt"><br />我已获得<span>XX元</span>现金红包,<br />
+进入<a href="#">活动主页</a>赢取更多壕礼！</div>
+		</div>
+		
+		<div class="cover"></div>
+		
+		<script>
+			$(function(){
+				
+				$(".mybonus").click(function(){
+					popup(".bonus")//奖金
+				})
+				$(".lrule").click(function(){
+					popup(".rulepop")//规则
+				})
+				
+				$(".btnshare").click(function() {
+					$(".share").show() //分享
+				});
+				$(".share").click(function() {
+					$(".share").hide() //分享
+				});
+				
+				
+				$(".close").click(function() {
+					$(this).parent().hide();
+					$(".cover").hide()
+				});
+				
+				
+				
+				
+				
+				$(".again").click(function() {
+					
+					if(flg){
+						$(this).parent().parent().hide();
+						$(".cover").hide();
+						
+						
+						if(i<asList.length-1){
+							i++;
+						}else{//如果游戏次数超过题库 则参数重置 并且题库顺序重置
+							alert(1)
+							i=0;
+							ask = asList.sort(function() {
+								return Math.random() - Math.random();
+							});
+						}
+						
+						s_index = 0;
+						askLoad(i);
+					}
+					
+					
+				})
+				
+				$("#play").click(function() {
+					if(flg) {
+						$(".home").hide()
+						$(".gameBox").show()
+						askLoad(0);
+					}
+				})
+				
+			})
+
+		window.onload=function(){
+			flg=true;
+			init();
+		}
+
+		</script>
+		
+		<script>
+			function update(demo, demo1, demo2, speeds) {
+				var demo = document.getElementById(demo);
+				var demo1 = document.getElementById(demo1);
+				var demo2 = document.getElementById(demo2);
+				var speed = speeds; //滚动速度值，值越大速度越慢
+				var nnn = 200 / demo1.offsetHeight;
+				for(i = 0; i < nnn; i++) {
+					demo1.innerHTML += "" + demo1.innerHTML
+				}
+				demo2.innerHTML = demo1.innerHTML //克隆demo2为demo1
+				function Marquee() {
+					if(demo2.offsetTop - demo.scrollTop <= 0) //当滚动至demo1与demo2交界时
+						demo.scrollTop -= demo1.offsetHeight //demo跳到最顶端
+					else {
+						demo.scrollTop++ //如果是横向的 将 所有的 height top 改成 width left 
+					}
+				}
+				var MyMar = setInterval(Marquee, speed); //设置定时器
+				demo.onmouseover = function() {
+					clearInterval(MyMar)
+				} //鼠标经过时清除定时器达到滚动停止的目的
+				demo.onmouseout = function() {
+					MyMar = setInterval(Marquee, speed)
+				} //鼠标移开时重设定时器
+			}
+
+			update("demo", "demo1", "demo2", 60);
+		</script>
+	</body>
+
+</html>
