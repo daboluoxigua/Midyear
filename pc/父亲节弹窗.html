@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/popup.js" ></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<link rel="stylesheet" href="css/pop.css" />
+	</head>
+	<body>
+		<div class="duanwu" style="position: fixed;z-index: 999;">
+			<img src="images/fuqing.png">
+		</div>
+		<div class="cover"></div>
+		<script>
+			$(function(){
+				popup(".duanwu");
+				$(".duanwu").click(function(){
+					$(this).hide();
+				})
+			})
+		</script>
+	</body>
+</html>

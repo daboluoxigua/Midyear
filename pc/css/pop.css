@@ -1,0 +1,187 @@
+.cover {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.popup {
+  position: fixed;
+  z-index: 999;
+}
+.popup .close {
+  background: url(../images/close.png);
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+  z-index: 5;
+}
+.popup .tit {
+  width: 100%;
+  text-align: center;
+}
+.popup .tit span {
+  background: url(../images/popt.png);
+  width: 201px;
+  height: 34px;
+  line-height: 34px;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  color: #822b09;
+  font-size: 18px;
+  font-weight: bold;
+  text-indent: 45px;
+  text-shadow: 1px 1px 0 #fff;
+}
+.popup .pop-main {
+  padding: 0 35px;
+  margin: 0 20px;
+  color: #7a7a7a;
+  max-height: 180px;
+  overflow: auto;
+  margin-top: 20px;
+}
+.popup .pop-main .txt {
+  margin-top: 10px;
+}
+.popup .pop-main .txt h2 {
+  color: #b43917;
+  font-size: 24px;
+  font-weight: normal;
+}
+.popup .pop-main .txt span {
+  font-size: 16px;
+  color: #822b09;
+  font-weight: bold;
+}
+.popup .pop-main .txt span b {
+  color: #ff530f;
+}
+.popup .pop-main .txt p {
+  font-size: 14px;
+  color: #822b09;
+  line-height: 24px;
+}
+.popup .pop-main table {
+  width: 100%;
+  line-height: 24px;
+  text-align: center;
+}
+.popup .pop-main table th {
+  color: #bf5928;
+}
+.popup .pop-main table td {
+  color: #822b09;
+}
+.popup .pop-btnbox {
+  text-align: center;
+  margin-top: 10px;
+}
+.popup .pop-btnbox .btn {
+  background: url(../images/popbtn.png);
+  width: 155px;
+  height: 60px;
+  line-height: 55px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2766e4;
+  text-shadow: 1px 1px 0 #fff;
+  position: relative;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+.popup .pop-btnbox .btn div {
+  background: url(../images/sharebg.png);
+  width: 173px;
+  height: 54px;
+  line-height: 0;
+  padding-left: 5px;
+  position: absolute;
+  left: -10px;
+  top: 50px;
+  display: none;
+}
+.popup .pop-btnbox .btn div a {
+  float: left;
+  margin: 14px 4px 0 4px;
+}
+.popup .pop-btnbox .btn div a img {
+  width: 34px;
+}
+.popup .pop-btnbox .btn:hover div {
+  display: block;
+}
+.open {
+  background: url(../images/open.png);
+  width: 448px;
+  height: 354px;
+}
+.open .close {
+  top: 94px;
+}
+.open .pop-main {
+  margin-top: 164px;
+  max-height: none;
+  overflow: inherit;
+}
+.open .pop-main .txt {
+  text-align: center;
+}
+.occlude {
+  background: url(../images/occlude.png);
+  width: 448px;
+  height: 354px;
+}
+.occlude .close {
+  top: 94px;
+}
+.occlude .pop-main {
+  margin-top: 164px;
+  max-height: none;
+  overflow: inherit;
+}
+.occlude .pop-main .txt {
+  text-align: center;
+}
+.small {
+  background: url(../images/popbg1.png);
+  width: 448px;
+  height: 274px;
+}
+.small .tit {
+  margin-top: 38px;
+}
+.small .pop-main {
+  max-height: 156px;
+}
+.small .pop-main .sh {
+  margin-top: 16px;
+}
+.small .pop-main .sh span {
+  font-size: 14px;
+  color: #bf5928;
+}
+.small .pop-main .sh p {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+.big {
+  background: url(../images/popbg2.png);
+  width: 517px;
+  height: 337px;
+}
+.big .tit {
+  margin-top: 38px;
+}
+.big .pop-main {
+  max-height: 156px;
+}
